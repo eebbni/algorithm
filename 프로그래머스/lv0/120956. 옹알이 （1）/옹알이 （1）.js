@@ -1,20 +1,13 @@
 function solution(babbling) {
     var answer = 0;
-    const canSpeak = ["aya", "ye", "woo", "ma"];
+    var canSpeak = ["aya", "ye", "woo", "ma"];
     
-    for(var i in babbling)
+    for(var i = 0 ; i < babbling.length ; i++)
     {
-        let text = babbling[i];
-        
-        canSpeak.forEach((v) => {
-            if (babbling[i].includes(v)) text = text.replace(v, '')
-        })
-
-        if(text.length == 0 )
+        if(canSpeak.includes(babbling[i]))
         {
             answer++;
         }
     }
-
     return answer;
 }
