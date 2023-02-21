@@ -14,11 +14,7 @@ function solution(s){
     }
   }) 
 
-  if(a['P'] == a['Y'] || (!a['P'] && !a['Y']))
-  {
-      answer = true
-  }
-  else
+  if(a['P'] != a['Y'])
   {
       answer = false
   }
